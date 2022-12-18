@@ -27,7 +27,7 @@ public class SportsDirectPage {
             removeItem = $(".s-basket-remove-button"),
             searchInput = $("#txtSearch"),
             searchResultShoes = $("#FiltersAndProductsWrapper"),
-            preLanguageButton = $(".languageRoot"),
+            preLanguageButton = $(".editCountryCurrency"),
             LanguageButton = $(".languageSelector");
 
     public SportsDirectPage openPage() {
