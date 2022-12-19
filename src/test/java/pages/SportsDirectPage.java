@@ -27,17 +27,23 @@ public class SportsDirectPage {
             searchInput = $("#txtSearch"),
             searchResultShoes = $("#FiltersAndProductsWrapper"),
             preLanguageButton = $(".editCountryCurrency"),
-            LanguageButton = $(".languageSelector");
+            LanguageButton = $(".languageSelector"),
+
+            contry= $(".CountryRedirectStayLink");
 
 
 
     public SportsDirectPage openPage() {
         step("Open 'https://www.sportsdirect.com/", () ->
                 open("https://www.sportsdirect.com/"));
+        step("Open 'https://www.sportsdirect.com/", () ->
+                contry.click());
+
         return this;
     }
 
     public SportsDirectPage cookies() {
+
         step("click on Accept cookies button", () ->
                 allCookies.click());
 
