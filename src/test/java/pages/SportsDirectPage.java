@@ -4,8 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 public class SportsDirectPage {
@@ -34,6 +33,7 @@ public class SportsDirectPage {
     public SportsDirectPage openPage() {
         step("Open 'https://www.sportsdirect.com/", () ->
                 open(""));
+        sleep(30000);
         return this;
     }
 
