@@ -30,6 +30,7 @@ public class SportsDirectPage {
             preLanguageButton = $(".editCountryCurrency"),
             LanguageButton = $(".languageSelector");
 
+
     public SportsDirectPage openPage() {
         step("Open 'https://www.sportsdirect.com/", () ->
                 open(""));

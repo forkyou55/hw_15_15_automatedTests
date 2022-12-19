@@ -5,6 +5,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.SportsDirectPage;
 
+import static com.codeborne.selenide.Selectors.byTagAndText;
+import static com.codeborne.selenide.Selenide.$;
+
 
 public class SportsDirectTests extends TestBase {
     SportsDirectPage sportsDirectPage = new SportsDirectPage();
@@ -39,15 +42,15 @@ public class SportsDirectTests extends TestBase {
                 .checkInSearchResults("1880");
     }
 
-    @Test
-    @DisplayName("Checking country selection")
-    void countrySearchTest() {
-        sportsDirectPage.
-                openPage()
-                .cookies()
-                .checkCountySelection()
-                .checkCountySelectionLanguage();
-    }
+//    @Test
+//    @DisplayName("Checking country selection")
+//    void countrySearchTest() {
+//        sportsDirectPage.
+//                openPage()
+//                .cookies()
+//                .checkCountySelection()
+//                .checkCountySelectionLanguage();
+//    }
 
     @Test
     @DisplayName("Add and remove item in bag")
