@@ -27,18 +27,21 @@ public class SportsDirectPage {
             searchInput = $("#txtSearch"),
             searchResultShoes = $("#FiltersAndProductsWrapper"),
             preLanguageButton = $(".editCountryCurrency"),
-            LanguageButton = $(".languageSelector");
+            LanguageButton = $(".languageSelector"),
+            click = $(".close");
 
 
     public SportsDirectPage openPage() {
         step("Open 'https://www.sportsdirect.com/", () ->
                 open(""));
+                click.click();;
         return this;
     }
 
     public SportsDirectPage cookies() {
         step("click on Accept cookies button", () ->
                 allCookies.click());
+
         return this;
     }
 
@@ -77,6 +80,11 @@ public class SportsDirectPage {
 
     }
 
+//    public void sportDir() {
+//        step("Click", () ->
+//                click.click());
+//
+//    }
     public SportsDirectPage checkCountySelection() {
         step("Click on button 'Country'", () ->
                 preLanguageButton.click());
@@ -96,4 +104,6 @@ public class SportsDirectPage {
         step("Check item bag", () ->
                 removeItem.click());
     }
+
+
 }
