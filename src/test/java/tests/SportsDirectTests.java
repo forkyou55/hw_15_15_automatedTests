@@ -37,8 +37,8 @@ public class SportsDirectTests extends TestBase {
     void shoesSearchTest() {
         sportsDirectPage
                 .openPage()
+                .search("new balance 1880").search("new balance 1880")
                 .cookies()
-                .search("new balance 1880")
                 .checkInSearchResults("1880");
     }
 

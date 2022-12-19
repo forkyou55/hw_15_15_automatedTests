@@ -33,7 +33,6 @@ public class SportsDirectPage {
     public SportsDirectPage openPage() {
         step("Open 'https://www.sportsdirect.com/", () ->
                 open(""));
-        sleep(30000);
         return this;
     }
 
