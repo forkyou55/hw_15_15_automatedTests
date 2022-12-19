@@ -34,11 +34,12 @@ public class SportsDirectPage {
     public SportsDirectPage openPage() {
         step("Open 'https://www.sportsdirect.com/", () ->
                 open(""));
-                click.click();;
         return this;
     }
 
     public SportsDirectPage cookies() {
+        step("click on Accept cookies button", () ->
+                click.click());
         step("click on Accept cookies button", () ->
                 allCookies.click());
 
@@ -80,7 +81,7 @@ public class SportsDirectPage {
 
     }
 
-//    public void sportDir() {
+    //    public void sportDir() {
 //        step("Click", () ->
 //                click.click());
 //
