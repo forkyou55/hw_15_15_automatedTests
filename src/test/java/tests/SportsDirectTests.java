@@ -47,8 +47,8 @@ public class SportsDirectTests extends TestBase {
     void countrySearchTest() {
         sportsDirectPage.
                 openPage()
-                .cookies()
                 .checkCountySelection()
+                .cookies()
                 .checkCountySelectionLanguage();
     }
 
