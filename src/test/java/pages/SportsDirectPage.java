@@ -36,8 +36,7 @@ public class SportsDirectPage {
     public SportsDirectPage openPage() {
         step("Open 'https://www.sportsdirect.com/", () ->
                 open("https://www.sportsdirect.com/"));
-        step("Open 'https://www.sportsdirect.com/", () ->
-                contry.click());
+
 
         return this;
     }
@@ -46,6 +45,8 @@ public class SportsDirectPage {
 
         step("click on Accept cookies button", () ->
                 allCookies.click());
+        step("click on Accept cookies button", () ->
+                contry.click());
 
         return this;
     }
