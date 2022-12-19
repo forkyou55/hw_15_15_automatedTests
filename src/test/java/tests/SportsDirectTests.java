@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.SportsDirectPage;
 
+import static com.codeborne.selenide.Selenide.*;
 
 
 public class SportsDirectTests extends TestBase {
@@ -60,4 +61,15 @@ public class SportsDirectTests extends TestBase {
                 .addAndRemoveItem();
     }
 
+    @Test
+    void authorizationTests(){
+                open("https://www.sportsdirect.com/");
+                $("#onetrust-accept-btn-handler").click();
+                $("#CountryRedirectStayLink").click();
+                $(".login").click();
+                $("#Login_EmailAddress").setValue("testqaforkyou55@gmail.com");
+                $("#Login_Password").setValue("Tester1488");
+                $("#LoginButton").click();
+
+    }
 }

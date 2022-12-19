@@ -29,7 +29,7 @@ public class SportsDirectPage {
             preLanguageButton = $(".editCountryCurrency"),
             LanguageButton = $(".languageSelector"),
 
-            contry= $("#CountryRedirectStayLink");
+            country= $("#CountryRedirectStayLink");
 
 
 
@@ -46,7 +46,7 @@ public class SportsDirectPage {
         step("click on Accept cookies button", () ->
                 allCookies.click());
         step("click on Accept cookies button", () ->
-                contry.click());
+                country.click());
 
         return this;
     }
