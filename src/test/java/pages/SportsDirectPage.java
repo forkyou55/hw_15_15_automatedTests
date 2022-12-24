@@ -29,7 +29,8 @@ public class SportsDirectPage {
             preLanguageButton = $(".editCountryCurrency"),
             LanguageButton = $(".languageSelector"),
 
-            country= $("#CountryRedirectStayLink");
+            country= $("#CountryRedirectStayLink"),
+            searchClick = $("#cmdSearch");
 
 
 
@@ -42,11 +43,18 @@ public class SportsDirectPage {
     }
 
     public SportsDirectPage cookies() {
-
         step("click on Accept cookies button", () ->
                 allCookies.click());
-        step("click on Accept cookies button", () ->
+        step("closing country modal", () ->
                 country.click());
+
+//        try {
+//            step("closing country modal", () ->
+//                    country.click());
+//            return this;
+//        } catch (Exception e) {
+//            return this;
+//        }
 
         return this;
     }
@@ -76,7 +84,9 @@ public class SportsDirectPage {
 
     public SportsDirectPage search(String text) {
         step("Enter text for input", () ->
-                searchInput.setValue(text)).pressEnter();
+                searchInput.setValue(text));
+        step("Click by search", () ->
+                searchClick.click());
         return this;
     }
 

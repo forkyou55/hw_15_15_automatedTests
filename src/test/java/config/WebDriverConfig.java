@@ -21,4 +21,12 @@ public interface WebDriverConfig extends Config {
 
     @Key("remote")
     String getRemote();
+
+    @Key("username")
+    String username();
+
+    @Key("password")
+    String password();
+
+
 }
